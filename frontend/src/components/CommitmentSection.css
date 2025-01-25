@@ -1,0 +1,85 @@
+.body{
+    margin: 0px;
+    padding: 0px;
+}
+.commitment-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 5%;
+    background-color: #f9f9f9;
+    color: #042B4C;
+}
+
+.commitment-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.commitment-content h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.commitment-items {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.commitment-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.commitment-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    background: linear-gradient(135deg, #1a2425, #042B4C);
+    color: #f0f0f0;
+}
+.commitment-card h3 {
+    font-size: 1.8rem;
+    color: #042B4C;
+    margin-bottom: 1rem;
+}
+.commitment-card h3:hover {
+    font-size: 1.8rem;
+    color: #ebebeb;
+    margin-bottom: 1rem;
+}
+
+.commitment-card p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.commitment-card p:hover{
+    font-size: 1.1rem;
+    color: wheat;
+    line-height: 1.6;
+}
+
+.commitment-image img {
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: px 4px 8px rgba(0, 0, 0, 0.1);;
+    
+}
+
+@media (max-width: 1024px) {
+    .commitment-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .commitment-image img {
+        max-width: 100%;
+        margin-top: 2rem;
+    }
+}

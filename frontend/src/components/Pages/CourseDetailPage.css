@@ -1,0 +1,75 @@
+.body{
+    margin: 0%;
+    padding: 0%;
+}
+
+.course-detail-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 40px;
+    background: #042B4C; /* Darker dull effect */
+    backdrop-filter: blur(12px); /* Apply background blur effect */
+    -webkit-backdrop-filter: blur(12px); /* For Safari compatibility */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+    font-family: 'basic';
+    src: url('../../assets/basic/basic-Bold-Italic.otf');
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+}
+
+.course-detail-card {
+    background: linear-gradient(135deg, #1a2425, #042B4C);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px 40px;
+    width: 50%; /* Adjust width based on your design preference */
+    text-align: center;
+    backdrop-filter: blur(10px); /* Glossy effect */
+    position: relative;
+}
+
+.course-detail-card h1 {
+    color: #f5f5f5; /* Dark grey color for the title */
+    font-size: 24px;
+}
+
+.course-detail-card p, .course-detail-card li {
+    color: #f5f5f5; /* Medium grey color for text */
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.course-detail-card ul {
+    list-style: none; /* Removes default list styling */
+    padding: 0; /* Removes default padding */
+    text-align: left; /* Align text to the left inside the card */
+    margin-top: 20px;
+}
+
+.course-detail-card button {
+    background-color: #042B4C; /* Blue color for the button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 188, 212, 0.4);
+}
+
+.course-detail-card button:hover {
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 5px 15px rgba(0, 188, 212, 0.4);
+    color: #042B4C;
+}

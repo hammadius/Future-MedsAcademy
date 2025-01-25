@@ -1,0 +1,52 @@
+.pathway-section h2 {
+    display: flex;
+    justify-content: center;
+    color: #042B4C;
+    transform: translateY(10px);
+
+}
+
+.heading-container {
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    font-size: 24px; /* Example font size, adjust as needed */
+    line-height: 1.4; /* Adjusts the line spacing */
+    text-align: left; /* Aligns text to the left */
+    white-space: pre-line; /* Maintains formatting with line breaks */
+}
+
+.pathway-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+    /* Additional styling for alignment and spacing */
+}
+
+.pathway-btn {
+    background-color: #f0f0f0; /* Light gray background */
+    border: none;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    /* Hover effects */
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.pathway-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    background: linear-gradient(135deg, #1a2425, #042B4C);
+    color: #f0f0f0;
+}
+
+.pathway-btn h3, .pathway-item p {
+    margin: 0; /* Remove margins to clean up spacing inside buttons */
+    display: flex;
+    justify-content: center;
+}

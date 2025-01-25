@@ -1,0 +1,229 @@
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background: #042B4C;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    color: #00bcd4;
+}
+
+.dashboard-content {
+    flex-grow: 1;
+    padding: 20px;
+    background: #f4f4f4;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #042B4C;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.dashboard-header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.logout-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #00bcd4;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.logout-btn button:hover {
+    background-color: #008c9e;
+}
+
+/* Card Styling */
+.dashboard-card {
+    background: #0E1C60;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 40%;
+}
+
+.dashboard-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.bar-chart {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 150px;
+    margin-top: 20px;
+}
+
+.bar {
+    width: 20px;
+    border-radius: 5px;
+    background: linear-gradient(to top, #4D47A3, #A0A0FF);
+}
+
+/* Varying Heights for Bar Graph */
+.bar:nth-child(1) { height: 80px; }
+.bar:nth-child(2) { height: 120px; }
+.bar:nth-child(3) { height: 100px; }
+.bar:nth-child(4) { height: 70px; }
+.bar:nth-child(5) { height: 90px; }
+.bar:nth-child(6) { height: 110px; }
+
+
+/* Manage Courses Section */
+.manage-courses {
+    margin-top: 20px;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.manage-courses h2 {
+    color: #042B4C;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Form Styling */
+.course-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.course-form input, 
+.course-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.course-form button {
+    padding: 15px;
+    background-color: #042B4C;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.course-form button:hover {
+    background-color: #00bcd4;
+}
+
+/* Course List Styling */
+.course-list {
+    margin-top: 30px;
+}
+
+.course-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.course-list li {
+    background: #E7E6FC;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.course-list h3 {
+    font-size: 20px;
+    color: #042B4C;
+    margin-bottom: 10px;
+}
+
+.course-list button {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.course-list button:hover {
+    background-color: #c9302c;
+}
+
+.course-list {
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+.course-item {
+    background: #e7e6fc;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.course-item:hover {
+    transform: scale(1.02);
+}
+
+.course-item h3 {
+    font-size: 20px;
+    color: #042B4C;
+    margin-bottom: 5px;
+}
+
+.course-item p {
+    font-size: 16px;
+    color: #555;
+}

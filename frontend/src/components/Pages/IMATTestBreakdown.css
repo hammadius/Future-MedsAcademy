@@ -1,0 +1,151 @@
+/* IMATTestBreakdown.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e6effc;
+    margin: 0;
+    padding: 0;
+    filter: blur(60%)opacity(10%);
+
+}
+
+/* Main container styling */
+.imat-breakdown-container {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 40px;
+    border-radius: 10px;
+    position: relative;
+    background: url('../../assets/imat-image.png') no-repeat center center/cover;
+    filter: brightness(70%);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Overlay effect to dull the image */
+.imat-breakdown-container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+    z-index: -1;  /* Ensure it does not block content */
+}
+
+
+/* Heading styling */
+.imat-heading {
+    position: relative;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+}
+
+/* Information cards section */
+.imat-info-cards {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Individual cards */
+.imat-card {
+    flex: 1;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    color: #fff;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Hover effect for cards */
+.imat-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Card headings */
+.imat-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Card content */
+.imat-card p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Scholarship section */
+.imat-scholarship {
+    position: relative;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 30px;
+    border-radius: 10px;
+    color: #fff;
+    margin-top: 40px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Scholarship section hover effect */
+.imat-scholarship:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-5px);
+}
+
+/* Scholarship headings */
+.imat-scholarship h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #ffd700; /* Gold color for premium look */
+}
+
+/* Scholarship text */
+.imat-scholarship p {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Quote Box Over Image */
+.imat-quote-box {
+    position: relative;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .imat-info-cards {
+        flex-direction: column;
+    }
+
+    .imat-card {
+        width: 100%;
+    }
+
+    .imat-heading {
+        font-size: 26px;
+    }
+
+    .imat-quote-box {
+        font-size: 18px;
+    }
+}

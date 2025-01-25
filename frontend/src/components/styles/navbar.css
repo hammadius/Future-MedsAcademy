@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* Navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Space between logos and nav links */
+    align-items: center; /* Center-align items vertically */
+    padding: 1rem 2rem;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo container (both logos on the left) */
+.logo-container {
+    display: flex; /* Arrange logos horizontally */
+    align-items: center; /* Center-align logos vertically */
+    gap: 10px; /* Add space between the two logos */
+}
+
+/* Individual logo styling */
+.logo img,
+.logo-2 img {
+    height: 40px; /* Adjust the size as needed */
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* Navigation links (unordered list) */
+.nav-links {
+    display: flex;
+    list-style: none; /* Remove default list styling */
+    margin: 0;
+    padding: 0;
+}
+
+/* Individual nav links (list items) */
+.nav-links li {
+    margin-left: 20px; /* Add spacing between nav links */
+}
+
+/* Nav links styling */
+.nav-links a {
+    text-decoration: none; /* Remove underline */
+    color: #000; /* Default link color */
+    font-weight: bold; /* Bold text */
+    transition: color 0.4s cubic-bezier(0.25, 1, 0.5, 1), transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Hover effect for nav links */
+.nav-links a:hover {
+    color: #042B4C; /* Change text color on hover */
+    transform: scale(1.1); /* Slightly enlarge the link on hover */
+    border-radius: 6px;
+}
+
+/* Ensure proper spacing for the last nav link */
+.nav-links a:last-child {
+    margin-right: 0;
+}
+
+/* Mobile and tablet responsiveness */
+@media screen and (max-width: 768px) {
+    /* Make logo container stack vertically */
+    .logo-container {
+        flex-direction: column; /* Stack logos vertically */
+        gap: 5px; /* Reduce space between logos */
+    }
+
+    /* Make navbar links stack vertically */
+    .nav-links {
+        display: none; /* Hide nav links by default */
+        position: absolute; /* Positioning for dropdown */
+        top: 80px; /* Position below navbar */
+        left: 0;
+        right: 0;
+        background-color: white;
+        padding: 1rem;
+        flex-direction: column; /* Stack links vertically */
+        text-align: center;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links li {
+        margin: 10px 0; /* Add vertical space between links */
+    }
+
+    /* Toggle button to show nav links */
+    .navbar-toggle {
+        display: block; /* Display toggle button */
+        cursor: pointer;
+        padding: 10px;
+        background-color: #f0a500;
+        color: white;
+        border: none;
+        font-size: 20px;
+    }
+
+    .navbar-toggle.open + .nav-links {
+        display: flex; /* Show nav links when the toggle button is clicked */
+    }
+
+    /* Adjust the navbar */
+    .navbar {
+        flex-direction: column; /* Stack logo and nav links vertically */
+        justify-content: flex-start;
+        padding: 1rem;
+    }
+}
+
+/* Tablet specific responsiveness */
+@media screen and (max-width: 1024px) {
+    .logo img,
+    .logo-2 img {
+        height: 30px; /* Reduce logo size for tablets */
+    }
+
+    .nav-links {
+        margin-left: 20px; /* Add spacing for tablet */
+    }
+}

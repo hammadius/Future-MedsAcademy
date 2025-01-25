@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #ffffff, #f0f0f0);;
+    border-radius: 8px;
+    margin-bottom: -45px;
+}
+.hero-image img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    background-color: #e0e0e0;
+    padding: 1px;
+}
+
+.hero-text {
+    text-align: center;
+    flex: 1;
+    margin: 0 2rem;
+}
+
+.hero-text h1 {
+    font-family: 'Roboto', sans-serif; /* Replace with the font specified in Figma */
+    color: #042B4C;
+    margin-bottom: 1rem;
+}
+
+.hero-text h1 span {
+    text-decoration: underline;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image img {
+        margin-bottom: 1rem;
+    }
+}
+.nav-button{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.nav-button .btn {
+    text-align: center;
+    width: 130px;
+    height: 40px;
+    font-weight: 1000;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 3s ease;
+    background-color: #042B4C;
+    color: #e0e0e0;
+    font-family: serif;
+    font-size: medium;
+}

@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.features-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 5%;
+    background: linear-gradient(135deg, #1a2425, #042B4C);
+    backdrop-filter: blur(12px); /* Apply background blur effect */
+    -webkit-backdrop-filter: blur(12px); /* For Safari compatibility */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    color: white;
+    margin: 3rem 0;
+}
+
+.features-text {
+    flex: 1;
+    margin-right: 3rem;
+}
+
+.features-text h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+.features-text p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.explore-btn {
+    padding: 0.8rem 1.5rem;
+    background-color: white;
+    color:#042B4C;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 5px 15px rgba(0, 188, 212, 0.4);
+}
+
+.explore-btn:hover {
+    background: linear-gradient(135deg, #67b7be, #042B4C);
+    box-shadow: 0 10px 30px rgba(37, 39, 39, 0.6);
+    transform: translateY(-5px);
+    color: white;
+}
+
+.features-image img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+.features-image img :hover{
+    filter: brightness(70%) blur(0px); /* Clear the image on hover */
+    transform: scale(1.02);
+}

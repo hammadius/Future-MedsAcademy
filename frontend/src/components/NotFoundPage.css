@@ -1,0 +1,65 @@
+.not-found-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1a2425, #042B4C);
+    color: white;
+    font-family: 'Arial', sans-serif; /* Assuming Arial, update if different */
+    text-align: center;
+    position: relative;
+}
+
+.not-found-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../assets/skeleton.png'); /* Path to your skeleton image */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.2; /* Light opacity to keep the skeleton subtle */
+}
+
+.not-found-container h1 {
+    font-size: 100px; /* Large font size for '404' */
+    margin: 0;
+    position: relative;
+    z-index: 1; /* Ensures text appears above the pseudo-element */
+}
+
+.not-found-container h2 {
+    font-size: 36px; /* Subtitle size */
+    font-weight: bold;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.not-found-container p {
+    font-size: 18px;
+    position: relative;
+    z-index: 1;
+}
+
+.not-found-container a {
+    padding: 10px 20px;
+    background-color: white; /* Button background color */
+    color: #042B4C;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    position: relative;
+    z-index: 1;
+}
+
+.not-found-container a:hover {
+    box-shadow: 0 10px 30px rgba(37, 39, 39, 0.6);
+    background: linear-gradient(135deg, #8fcfd4, #042B4C);
+    color: white;
+}

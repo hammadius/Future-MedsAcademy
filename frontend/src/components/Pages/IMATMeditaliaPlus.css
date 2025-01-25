@@ -1,0 +1,58 @@
+.course-detail-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #F0F3F7; /* Light background for the whole page */
+}
+
+.course-detail-card {
+    background-color: #ffffff; /* White background for the card */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px 40px;
+    width: 50%; /* Adjust width based on your design preference */
+    text-align: center;
+    backdrop-filter: blur(10px); /* Glossy effect, make sure to adjust based on background availability */
+}
+
+.course-detail-card h1 {
+    color: #2C3E50; /* Dark blue color for the title, matching the theme */
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.course-detail-card p {
+    font-size: 16px;
+    color: #34495E; /* Slightly lighter blue for the text */
+    margin-bottom: 20px;
+}
+
+.course-detail-card ul {
+    list-style: none; /* Removes default list styling */
+    padding: 0; /* Removes default padding */
+    text-align: left; /* Align text to the left inside the card */
+    margin-top: 20px;
+}
+
+.course-detail-card li {
+    font-size: 16px;
+    color: #5D6D7E; /* Grey color for the list items */
+    margin-bottom: 10px;
+}
+
+.course-detail-card button {
+    background-color: #2980B9; /* Bright blue color for the button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.course-detail-card button:hover {
+    background-color: #21618C; /* Darker blue on hover */
+}
