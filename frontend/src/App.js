@@ -18,40 +18,32 @@ import GlobalTestCentres from "./components/Pages/GlobalTestCentres";
 import ScholarshipOpportunities from "./components/Pages/ScholarshipOpportunities";
 import VisionPage from "./components/Pages/VisionPage";
 import UniversitiesPage from "./components/Pages/UniversitiesPage";
-import NotFoundPage from './components/NotFoundPage';
+import NotFoundPage from "./components/NotFoundPage";
 import CourseDetailPage from "./components/Pages/CourseDetailPage";
 import IMATMeditaliaPlus from "./components/Pages/IMATMeditaliaPlus";
 
 const App = () => {
-    // Create references for smooth scrolling
     const courseSectionRef = useRef(null);
     const footerSectionRef = useRef(null);
 
-    // Function to scroll to the CourseOffering section
-    const scrollToCourses = (e) => {
+    const scrollToSection = (ref) => (e) => {
         e.preventDefault();
-        if (courseSectionRef.current) {
-            courseSectionRef.current.scrollIntoView({ behavior: "smooth" });
-        }
-    };
-
-    // Function to scroll to the Footer section
-    const scrollToFooter = (e) => {
-        e.preventDefault();
-        if (footerSectionRef.current) {
-            footerSectionRef.current.scrollIntoView({ behavior: "smooth" });
+        if (ref.current) {
+            ref.current.scrollIntoView({ behavior: "smooth" });
         }
     };
 
     return (
         <Router>
-            <Navbar scrollToCourses={scrollToCourses} scrollToFooter={scrollToFooter} />
+            <Navbar 
+                scrollToCourses={scrollToSection(courseSectionRef)} 
+                scrollToFooter={scrollToSection(footerSectionRef)} 
+            />
             <Routes>
-                {/* Home Page */}
                 <Route
                     path="/"
                     element={
-                        <div>
+                        <>
                             <HeroSection />
                             <FeaturesSection />
                             <div ref={courseSectionRef}>
@@ -62,35 +54,23 @@ const App = () => {
                             <div ref={footerSectionRef}>
                                 <Footer />
                             </div>
-                        </div>
+                        </>
                     }
                 />
-
-                {/* Pathway Section Pages */}
                 <Route path="/imat-test-breakdown" element={<IMATTestBreakdown />} />
                 <Route path="/global-test-centres" element={<GlobalTestCentres />} />
-                <Route path="/ScholarshipOpportunities" element={<ScholarshipOpportunities />} />
-                <Route path="/VisionPage" element={<VisionPage />} />
-                <Route path="/UniversitiesPage" element={<UniversitiesPage/>} />
-
-                {/* Static Pages */}
+                <Route path="/scholarship-opportunities" element={<ScholarshipOpportunities />} />
+                <Route path="/vision-page" element={<VisionPage />} />
+                <Route path="/universities-page" element={<UniversitiesPage />} />
                 <Route path="/about" element={<h1>About Us</h1>} />
                 <Route path="/courses" element={<h1>Courses</h1>} />
-
-                {/* Authentication Pages */}
                 <Route path="/signup" element={<SignUp />} />
                 <Route path="/login" element={<Login />} />
-
-                {/* Protected Dashboard Routes */}
-                <Route path="/admin-dashboard" element={<ProtectedRoute element={<AdminDashboard />} role="admin" />} />
-                <Route path="/student-dashboard" element={<ProtectedRoute element={<StudentDashboard />} role="student" />} />
-                <Route path="/admin-dashboard/manage-courses" element={<ProtectedRoute element={<ManageCourses />} role="admin" />} />
-
-                {/* Course pages */}
+                <Route path="/admin-dashboard" element={<ProtectedRoute><AdminDashboard /></ProtectedRoute>} />
+                <Route path="/student-dashboard" element={<ProtectedRoute><StudentDashboard /></ProtectedRoute>} />
+                <Route path="/admin-dashboard/manage-courses" element={<ProtectedRoute><ManageCourses /></ProtectedRoute>} />
                 <Route path="/course-detail" element={<CourseDetailPage />} />
-                <Route path="/IMATMeditalia+" element={<IMATMeditaliaPlus />} />
-                    
-                {/* Handle undefined routes */}
+                <Route path="/imat-meditalia-plus" element={<IMATMeditaliaPlus />} />
                 <Route path="*" element={<NotFoundPage />} />
             </Routes>
         </Router>
